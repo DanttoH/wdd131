@@ -27,7 +27,7 @@ main {
     background-color: rgb(161, 161, 161);
     color: white;
     grid-column: 1 / 2;
-    height: 20rem;
+    padding: 20rem;
     align-content: center;
 
 }
@@ -46,4 +46,5 @@ footer {
     color: white;
     grid-column: 1 / 4;
     text-align: center;
+    padding: 4rem;
 }
