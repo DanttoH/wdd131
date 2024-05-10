@@ -1,0 +1,99 @@
+body {
+    display: grid;
+    grid-template: auto 1fr auto / auto 1fr auto;
+    background-color: white;
+}
+
+nav {
+    display: flex;
+    padding: 1rem;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #5C8374;
+    grid-column: 1 / 5;
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+
+}
+
+header,
+.placeholder {
+    background-color: #092635;
+    color: white;
+    padding: 2rem;
+    grid-column: 1 / 5;
+}
+
+h2,
+h3,
+h4 {
+    border-radius: 15px;
+    background-color: #1B4242;
+    text-align: center;
+    width: 20rem;
+    color: white;
+}
+
+h2 {
+    display: block;
+}
+
+
+main {
+    color: white;
+    grid-column: 1 / 2;
+    padding: 20rem;
+    align-content: left;
+    margin: 5rem;
+    border: 1px solid rgb(11, 11, 11);
+    padding: 1rem;
+    background-color: #5C8374;
+    border-radius: 10px;
+
+}
+
+aside {
+    background-color: white;
+    ;
+    grid-column: 2 / 3;
+    text-align: center;
+    color: black;
+    text-align: center;
+    padding: 5rem;
+}
+
+footer {
+    background-color: #1B4242;
+    color: white;
+    grid-column: 1 / 4;
+    text-align: center;
+    padding: 4rem;
+}
+
+.card,
+img {
+
+    padding: 2rem;
+
+    float: right;
+
+}
+
+.box-indent {
+    margin: 1rem;
+    border: 1px solid rgb(11, 11, 11);
+    padding: 1rem;
+    background-color: #5C8374;
+    color: #000;
+    padding-left: 2rem;
+    height: 20rem;
+    border-radius: 10px;
+}
+
+.box li {
+    padding: 2rem;
+}
