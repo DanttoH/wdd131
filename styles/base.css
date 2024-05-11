@@ -20,6 +20,12 @@ a {
 
 }
 
+a:hover {
+    transition: all 0.3s ease 0s;
+    background-color: #9CAFAA;
+
+}
+
 header,
 .placeholder {
     background-color: #9CAFAA;
@@ -53,6 +59,7 @@ main {
     padding: 1rem;
     background-color: #EFBC9B;
     border-radius: 10px;
+    max-width: fit-content;
 
 }
 
@@ -92,6 +99,7 @@ img {
     padding-left: 2rem;
     height: 20rem;
     border-radius: 10px;
+    max-width: fit-content;
 }
 
 .box li {
