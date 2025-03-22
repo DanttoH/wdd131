@@ -1,106 +1,162 @@
+/* General Layout */
 body {
     display: grid;
     grid-template: auto 1fr auto / auto 1fr auto;
-    background-color: #FBF3D5;
+    background-color: #F5F7FA;
+    /* Light, professional background */
+    font-family: 'Poppins', sans-serif;
+    /* Clean, modern font */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #2C3E50;
+    /* Primary text color */
 }
 
+/* Navigation Bar */
 nav {
     display: flex;
-    padding: 1rem;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 2rem;
     align-items: center;
-    background-color: #EFBC9B;
+    background-color: #2C3E50;
+    /* Dark, professional tone */
+    padding: 1rem 0;
     grid-column: 1 / 5;
-
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-a {
+nav a {
     text-decoration: none;
     color: white;
+    /* Contrast against dark nav */
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
 
+nav a:hover {
+    background-color: #1A5276;
+    /* Clear hover state */
+    transform: translateY(-2px);
+    /* Slight lift effect */
+}
+
+/* Header Section */
+header {
+    background: linear-gradient(135deg, #2C3E50, #1A5276);
+    color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+    grid-column: 1 / 5;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Content */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3rem 5%;
+    grid-column: 1 / 2;
+}
+
+/* Cards */
+.card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: transform 0.3s;
+    max-width: 800px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    /* Lift on hover */
+}
+
+.card img {
+    float: right;
+    margin-left: 1.5rem;
+    border-radius: 10px;
+}
+
+/* Section Headings */
+h2 {
+    font-size: 2rem;
+    color: #2C3E50;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #3498DB;
+    /* Accent underline */
+    display: inline-block;
+}
+
+/* Aside - Resources Section */
+aside {
+    background: #FFFFFF;
+    border-left: 4px solid #3498DB;
+    /* Accent border */
+    padding: 2rem;
+    text-align: left;
+    grid-column: 2 / 3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #2C3E50;
+    /* Consistent with nav */
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    grid-column: 1 / 4;
+}
+
+/* Links */
+a {
+    color: #3498DB;
+    /* Accent color for regular links */
+    text-decoration: none;
 }
 
 a:hover {
-    transition: all 0.3s ease 0s;
-    background-color: #9CAFAA;
-
+    text-decoration: underline;
 }
 
-header,
-.placeholder {
-    background-color: #9CAFAA;
-    color: white;
-    padding: 2rem;
-    grid-column: 1 / 5;
-}
-
-h2,
-h3,
-h4 {
-    border-radius: 15px;
-    background-color: #9CAFAA;
-    text-align: center;
-    width: 20rem;
-    color: white;
-}
-
-h2 {
-    display: block;
-}
-
-
-main {
-    color: white;
-    grid-column: 1 / 2;
-    padding: 20rem;
-    margin: 5rem;
-    border: 1px solid rgb(11, 11, 11);
-    padding: 1rem;
-    background-color: #EFBC9B;
-    border-radius: 10px;
-    max-width: fit-content;
-
-}
-
-aside {
-    background-color: #FBF3D5;
-    ;
-    grid-column: 2 / 3;
-    text-align: center;
-    color: black;
-    text-align: center;
-    padding: 5rem;
-}
-
-footer {
-    background-color: #9CAFAA;
-    color: white;
-    grid-column: 1 / 4;
-    text-align: center;
-    padding: 4rem;
-}
-
-.card,
-img {
-
-    padding: 2rem;
-
-    float: right;
-
-}
-
+/* Utility */
 .box-indent {
-    margin: 1rem;
-    border: 1px solid rgb(11, 11, 11);
-    padding: 1rem;
-    background-color: #EFBC9B;
-    color: #000;
+    margin-top: 1rem;
     padding-left: 2rem;
-    height: 20rem;
-    border-radius: 10px;
-    max-width: fit-content;
 }
 
-.box li {
-    padding: 2rem;
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        grid-template: auto 1fr auto / 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    main {
+        grid-column: 1 / 3;
+    }
+
+    aside {
+        grid-column: 1 / 3;
+    }
 }
