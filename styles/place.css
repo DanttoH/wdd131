@@ -1,0 +1,394 @@
+/* Variables */
+:root {
+    --primary-color: #2980b9;
+    /* Azul profesional */
+    --secondary-color: #ffffff;
+    /* Blanco */
+    --accent-color: #2c3e50;
+    /* Gris oscuro */
+    --background-color: #ecf0f1;
+    /* Fondo suave */
+    --highlight-color: #27ae60;
+    /* Verde suave */
+    --base-padding: 20px;
+    --border-radius: 12px;
+    --transition-speed: 0.4s;
+    /* Transición suave */
+}
+
+/* General */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+    color: var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 30px;
+    font-size: 2em;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    border-radius: 20px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+    background-color: var(--secondary-color);
+    /*background-image: url('/images/heroportones.webp');/*
+    /* Se asegura de que la imagen esté aquí */
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    /* Reducido el tamaño del hero */
+    border-radius: var(--border-radius);
+    margin-top: 20px;
+
+
+
+
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-image {
+    display: none;
+    /* Ocultar imagen hero ya que será la imagen de fondo */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: var(--border-radius);
+}
+
+/* Card Styles (Data & Weather) */
+.card {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Fondo semi-transparente */
+    border-radius: var(--border-radius);
+    padding: 10px;
+    /* Reducir el padding para hacer las tarjetas más pequeñas */
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    font-size: 0.9em;
+    /* Reducido el tamaño de la fuente */
+    max-width: 100%;
+    margin: 10px;
+}
+
+.card h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.card label {
+    font-weight: bold;
+}
+
+.card span {
+    font-weight: normal;
+}
+
+/* Info Card (Data) */
+.info {
+    width: 25%;
+    /* Ancho reducido */
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: var(--accent-color);
+    font-size: 0.8em;
+    /* Reducir tamaño de fuente */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    max-width: 200px;
+    /* Ajuste el tamaño máximo de la tarjeta */
+    z-index: 2;
+    /* Asegurarse de que quede encima de la imagen */
+}
+
+.info label,
+.info span {
+    display: block;
+    margin: 5px 0;
+}
+
+/* Weather Card */
+.weather {
+    width: 25%;
+    /* Ancho reducido */
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: var(--accent-color);
+    font-size: 0.8em;
+    /* Reducir tamaño de fuente */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: center;
+    max-width: 200px;
+    /* Ajuste el tamaño máximo de la tarjeta */
+    z-index: 2;
+    /* Asegurarse de que quede encima de la imagen */
+}
+
+.weather img {
+    max-width: 60px;
+    /* Reducir tamaño de la imagen */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.weather label,
+.weather span {
+    display: block;
+    margin: 5px 0;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+    font-size: 1em;
+    position: relative;
+    margin-top: 100px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        /* Asegura que la imagen no se recorte */
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    .info,
+    .weather {
+        width: 80%;
+        /* Ajustar al 80% en pantallas pequeñas */
+        position: relative;
+        margin-bottom: 20px;
+        max-width: 350px;
+        /* Tamaño más pequeño */
+    }
+
+    .info {
+        position: relative;
+    }
+
+    .weather {
+        position: relative;
+    }
+}
+
+/* Card Styles (Data & Weather) */
+.card {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Fondo semi-transparente */
+    border-radius: var(--border-radius);
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 0.9em;
+    margin: 10px;
+}
+
+.card h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.card label {
+    font-weight: bold;
+}
+
+.card span {
+    font-weight: normal;
+}
+
+/* Info Card (Data) */
+.info {
+    width: 30%;
+    /* Ancho reducido */
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: var(--accent-color);
+    font-size: 0.8em;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    max-width: 220px;
+    z-index: 2;
+}
+
+.info label,
+.info span {
+    display: block;
+    margin: 5px 0;
+}
+
+/* Weather Card */
+.weather {
+    width: 30%;
+    /* Ancho reducido */
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: var(--accent-color);
+    font-size: 0.8em;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: center;
+    max-width: 220px;
+    z-index: 2;
+}
+
+.weather img {
+    max-width: 60px;
+    /* Reducir tamaño de la imagen */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.weather label,
+.weather span {
+    display: block;
+    margin: 5px 0;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+    font-size: 1em;
+    position: relative;
+    margin-top: 100px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Ajustes para pantallas pequeñas */
+
+    .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .info,
+    .weather {
+        width: 100%;
+        /* Las tarjetas ocupan el 100% del ancho */
+        position: relative;
+        margin-bottom: 20px;
+        max-width: 350px;
+        /* Tamaño más pequeño */
+        margin-left: 0;
+        margin-right: 0;
+        padding: 15px;
+        font-size: 0.9em;
+        box-shadow: none;
+    }
+
+    .info {
+        margin-top: 20px;
+        order: 1;
+        /* Coloca el Data debajo de la imagen */
+    }
+
+    .weather {
+        margin-top: 20px;
+        order: 2;
+        /* Coloca el Weather debajo del Data */
+    }
+
+    .overlay {
+        display: none;
+        /* Ocultar la superposición en pantallas pequeñas */
+    }
+
+    .info,
+    .weather {
+        position: relative;
+        max-width: 100%;
+        /* Asegura que las tarjetas sean responsivas */
+        top: auto;
+        left: auto;
+        right: auto;
+        background-color: rgba(255, 255, 255, 0.9);
+        z-index: 1;
+    }
+}

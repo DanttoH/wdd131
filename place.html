@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="country place">
+    <meta name="author" content="Dantto Elias Hermosilla Orellana">
+    <title>Explore Mendoza</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Explore Mendoza</h1>
+        </div>
+    </header>
+
+    <section class="hero" id="hero">
+        <img src="images/heroportones.webp" alt="mendoza view">
+        <div class="container">
+            <picture>
+                <!-- Small Screen Image -->
+                <source src="images/hero-small.webp" media="(max-width: 600px)">
+                <!-- Large Screen Image -->
+                <source src="images/heroportones.webp" media="(min-width: 601px)">
+                <img class="hero-image" src="images/heroportones.webp" alt="Mendoza view">
+            </picture>
+            <div class="overlay"></div>
+
+            <div class="card info" id="info">
+                <h2>Data</h2>
+                <label>Area:</label> <span>148,827 km²</span>
+                <label>Population:</label> <span>2,014,533</span>
+                <label>Capital:</label> <span>Mendoza</span>
+                <label>Languages:</label> <span>Spanish</span>
+                <label>Currency:</label> <span>Argentine Peso (ARS)</span>
+                <label>Time Zone:</label> <span>UTC-3</span>
+                <label>Calling Code:</label> <span>+54</span>
+                <label>Internet TLD:</label> <span>.ar</span>
+            </div>
+
+            <div class="card weather" id="weather">
+                <h2>Weather <span>⛅</span></h2>
+                <img src="images/wather.svg" alt="weather-icon">
+                <label>Temperature:</label> <span id="temperature">Loading...</span>
+                <label>Conditions:</label> <span id="description">Loading...</span>
+                <label>Wind Speed:</label> <span id="wind-speed">Loading...</span>
+                <label>Wind Chill:</label> <span id="wind-chill">Loading...</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p> &copy; <span id="theyear"></span> 💪🏻Dantto Hermosilla Mendoza✌🏻 , Argentina</p>
+        <p id="lastModified"> &bull; <span id="lastu"></span></p>
+    </footer>
+</body>
+
+</html>
