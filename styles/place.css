@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 /* Variables */
 :root {
     --primary-color: #2980b9;
@@ -191,6 +194,21 @@ footer {
 footer p {
     margin: 0;
 }
+
+footer::after {
+    content: " | All rights reserved.";
+    font-size: 0.8em;
+    color: var(--secondary-color);
+    margin-left: 10px;
+}
+
+h1::after {
+    content: " - Discover the beauty!";
+    font-size: 0.8em;
+    color: var(--secondary-color);
+}
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
